@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'pages/home'
   resources :posts
   resources :articles
   # resources :users
@@ -12,7 +13,7 @@ Rails.application.routes.draw do
   get '/users/:id/edit' => 'users#edit', as: 'edit_user'
   patch '/users/:id' => 'users#update', as: 'update_user'
   
-  root "users#index"
+  root "pages#home"
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
