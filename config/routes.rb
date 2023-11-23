@@ -3,14 +3,16 @@ Rails.application.routes.draw do
   resources :articles
   # resources :users
 
-  # root "users#index"
+  
   get '/users' => 'users#index'
   get '/users/new' => 'users#new', as: 'new_user'
+  get '/users/:id' => 'users#show', as: 'show_user'
   post '/users' => 'users#create', as: 'create_user'
   delete '/users/:id', to: 'users#destroy', as: 'delete_user'
   get '/users/:id/edit' => 'users#edit', as: 'edit_user'
   patch '/users/:id' => 'users#update', as: 'update_user'
-  get '/users' => 'users#show', as: 'user'
+  
+  root "users#index"
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

@@ -1,0 +1,5 @@
+<p>
+  <p>Username: <%= @user.username%></p>
+  <p>Password: <%= @user.password%></p>
+  <%= link_to 'Update User', edit_user_path(@user.id) %>
+</p>
