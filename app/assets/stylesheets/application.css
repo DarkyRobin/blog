@@ -13,8 +13,135 @@
  *= require_tree .
  *= require_self
  */
+ @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Roboto:wght@100;300;400;500&display=swap');
 
- html { font-size: medium;}
- body {
+*{
+  padding: 0;
+  margin: 0;
+  outline: none;
+  border: none;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body{
+  font-family: 'Open Sans', sans-serif;
+  background-color: cadetblue;
+}
+
+a {
+  text-decoration: none;
+}
+
+nav{
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.nav-links{
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.link a{
+  position: relative;
+  padding-bottom: 0.75rem;
+  color: #fff;
+}
+.link a::after{
+  content: "";
+  position: relative;
+  height: 2px;
+  width: 0;
+  bottom: 0;
+  left: 0;
+  background-color: lawngreen;
+  transition: all 0.3 ease;
+}
+
+.container{
+  max-width: 1200px;
+  margin: auto;
+  padding: 5rem 2rem;
+}
+
+header{
+  position: relative;
+  padding-top: 2rem;
+  display: grid;
+}
+
+header .content h1{
+  margin-bottom: 1rem;
+  color: #ccc;
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 4rem;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+.edit-button, .delete-button, .new-button {
+  background-color: #3498db;
+  color: #fff;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.edit-button:hover, .delete-button:hover, .new-button:hover {
+  background-color: #2980b9;
+}
+
+/* .button-right-direction{
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: end;
+  padding-left: 5rem;
+} */
+
+table {
+  width: 50%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+  width: 100%;
   
- }
+}
+
+.button-right-direction{
+  display: flex;
+  flex-direction: row;
+  align-content: end;
+  gap: 1rem;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
