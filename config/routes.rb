@@ -7,11 +7,12 @@ Rails.application.routes.draw do
   
   get '/users' => 'users#index'
   get '/users/new' => 'users#new', as: 'new_user'
-  get '/users/:id' => 'users#show', as: 'show_user'
+  get '/users/:id' => 'users#show', as: 'user'
+  patch '/users/:id' => 'users#update', as: 'update_user'
   post '/users' => 'users#create', as: 'create_user'
   delete '/users/:id', to: 'users#destroy', as: 'delete_user'
   get '/users/:id/edit' => 'users#edit', as: 'edit_user'
-  patch '/users/:id' => 'users#update', as: 'update_user'
+  
   
   root "pages#home"
 
